@@ -1,11 +1,15 @@
-var songFail ="Audio/Curse.mp3";
-var songPass ="Audio/Laughing.mp3"
+var songFail ="Audio/dsh.mp3";
+var songPass ="Audio/ifd.mp3"
 var songAverage ="Audio/Story.mp3"
 var songCredit ="Audio/vivid.mp3"
+var songGood ="Audio/dont.mp3"
+var songExcellent ="Audio/dont.mp3"
 var songToPlayFail = new Audio(songFail)
 var songToPlayPass = new Audio(songPass)
 var songToPlayAverage = new Audio(songAverage)
 var songToPlayCredit = new Audio(songCredit)
+var songToPlayGood = new Audio(songGood)
+var songToPlayExcellent = new Audio(songExcellent)
 
 
 function scoreGrading(){
@@ -31,11 +35,14 @@ function scoreGrading(){
     } else if(num.value >= 59 && num.value < 70){
         showResult.value ="B -"+"  Good 👍" 
         showResult.style.color = "green"
+        songToPlayGood.play() 
     } else if(num.value >= 70 && num.value <= 100){
         showResult.value ="A -"+" Excellent 😀👏" 
         showResult.style.color = "green"
+        songToPlayExcellent.play()
     }  else{
         showResult.value = "This is over the score"
         showResult.style.color = "black"
+       
     }
 }
